@@ -5,6 +5,14 @@
     <title>INDEX</title>
 </head>
 <body>
-    <h1>Cookie Value {{.}}</h1>
+    <h1>Your images: </h1>
+    {{range .}}
+    <img src="/public/{{.}}">
+    {{end}}
+
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="nf">
+        <input type="submit">
+    </form>
 </body>
 </html>
